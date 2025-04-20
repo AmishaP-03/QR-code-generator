@@ -1,9 +1,92 @@
+:root {
+    --primary-color: cornflowerblue;
+}
+
+body {
+    background-color: aliceblue;
+}
+
 header {
     text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 1rem;
+    border-bottom: 0.1rem solid slategray;
+}
+
+img {
+    width: 10rem;
+}
+
+ul {
+    padding: 0;
+    width: 40%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    width: 50%;
+    margin: auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 2rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    border-radius: 4rem;
+}
+
+label {
+    margin: 0.5rem;
+}
+
+input {
+    border-radius: 0.4rem;
+    font-size: x-large;  /* setting the font size helps us control the size of the input box */
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: none; /* If we change border upon focus, the position of content changes. To avoid that use outline as it is rendendered outside the box model of input and does not impact the content's width and position. */
+    outline: 0.1rem solid black;
+}
+
+input:focus {
+    outline: 0.1rem solid var(--primary-color);
+}
+
+.generate-qr-button {
+    margin: 0.5rem 0.5rem 0.5rem auto;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    outline: none;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+
+}
+
+#qr-code {
+    text-align: center;
 }

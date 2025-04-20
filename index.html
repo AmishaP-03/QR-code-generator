@@ -18,21 +18,21 @@
                 <li>Help</li>
             </ul>
             <section>
-                <button>Sign in</button>
-                <button>Sign in</button>
+                <button class="secondary-button">Sign in</button>
+                <button class="primary-button">Sign in</button>
             </section>
         </nav>
-        <h1>QR code generator app</h1>
+        <h1>Generate dynamic QR codes</h1>
     </header>
     <main>
         <form>
-            <label for="userInput">Text/URL</label>
-            <input type="text" id="userInput" placeholder="Enter text or URL">
+            <label for="userInput"><b>Enter your text or website URL</b></label>
+            <input type="text" id="userInput" placeholder="Text or URL">
 
-            <button onclick="generateQRCode()">Generate QR code</button>
+            <button class="primary-button generate-qr-button" onclick="generateQRCode(event)">Generate</button>
         </form>
 
-        <div id="qrCode"></div>
+        <div id="qr-code"></div>
     </main>
 
     <!-- QR Code library -->
